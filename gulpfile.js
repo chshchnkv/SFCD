@@ -5,7 +5,6 @@ var postcss =       require("gulp-postcss");
 var autoprefixer =  require("autoprefixer");
 var minify =        require("gulp-minify-css");
 var rename =        require("gulp-rename");
-var copy2 =         require("gulp-copy2");
 var watch =         require("gulp-watch");
 var server =        require('gulp-server-livereload');
 var imagemin =      require('gulp-imagemin');
@@ -33,6 +32,12 @@ gulp.task("watch", function() {
       emitOnGlob: false,
       glob: ["less/**/*.less"]
     }, queue.getHandler("build-styles"));
+});
+
+
+gulp.task("build-js", function () {
+  return gulp.src(src + "/js/*")
+              .pipe(gulp.dest(dest + "/js"));
 });
 
 
@@ -103,5 +108,9 @@ gulp.task("build", function () {
       .pipe(gulp.dest(dest + "/"));  
   
   gulp.src(src + "/fonts/*")
-      .pipe(gulp.dest(dest + "/fonts"));  
+      .pipe(gulp.dest(dest + "/fonts"));
+  
+  gulp.src(src + "/js/*")
+      .pipe(gulp.dest(dest + "/js"));
+  
 })
