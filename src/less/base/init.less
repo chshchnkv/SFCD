@@ -1,0 +1,36 @@
+@debug: true;
+@debug: false;
+
+html {
+  box-sizing: border-box;
+
+  font-family: @font-family;
+  font-size: @font-base;
+  line-height: normal;
+  
+  color: @color-text-dark;
+  background-color: @color-bg-light;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  
+  .outline;
+}
+
+
+a {
+  .hover-underlined();  
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+
+  &.wide {
+    height: 100%;
+    width: auto;
+  }
+
+}

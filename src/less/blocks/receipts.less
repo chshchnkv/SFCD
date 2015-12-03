@@ -1,0 +1,176 @@
+.receipts {
+  padding-bottom: 1.6rem;
+  
+  background-color: @recipe-gradient-end;
+  background-image: linear-gradient(to bottom, #fff, fadeout(#fff, 100));
+
+  @media (min-width: @screen-sm) {
+    padding-bottom: 3rem;
+  }
+  
+  @media (min-width: @screen-lg) {
+    padding-bottom: 6rem;
+  }
+  
+  &__header {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    
+    margin-bottom: 2rem;
+    
+    font-size: @h3;
+    
+    @media (min-width: @screen-sm) {
+      margin-bottom: 2.5rem;
+      
+      font-size: 2.8rem;
+    }
+  }
+  
+  
+  &__all {
+    display: block;
+    
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: @red-text;
+    text-align: right;
+    
+    @media (min-width: @screen-sm) {
+      font-size: 1.8rem;
+    }
+  }
+  
+  
+  &__list {
+    .list-no-markers;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+    overflow-x: auto;  
+    
+    padding-bottom: 1.5rem;
+
+    @media (min-width: @screen-sm) {
+      display: block;
+      
+      .make-row();
+      .row-custom-gutters();
+    }
+  }
+  
+  
+  &__item {
+    
+    flex-basis: 90%;
+    max-width: 90%;
+    
+    flex-shrink: 0;
+        
+    & + & {
+      margin-left: 1.5rem;
+    }
+    
+    @media (min-width: @screen-sm) {
+      .make-sm-column(2);
+      .col-custom-gutters();
+      
+      & + & {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+
+.receipt {
+
+  overflow: hidden;
+
+  border-radius: 1rem;
+  border: 1px solid @receipt-border;
+
+  background-color: #fff;
+  box-shadow: 0 0.3rem 0.5rem @receipt-border;
+
+  
+  &__header {
+    position: relative;
+  }
+  
+  &__price {
+    position: absolute;
+    right: 1.5rem;
+    bottom: -1.5rem;
+    
+    width: 6.5rem;
+    height: 6.5rem;
+    
+    font-size: 1.9rem;
+  }
+  
+  
+  &__content {
+    padding: 2.5rem 2rem 3rem;
+  }
+  
+  
+  &__title {
+    margin-bottom: 2rem;  
+  }
+  
+  
+  &__time {
+    
+  }
+  
+  
+  &__photo {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    
+    overflow: hidden;
+  }
+  
+  
+  &__category {
+    margin-bottom: 1.8rem;
+    
+    @media (min-width: @screen-sm) {
+      margin-bottom: 1.5rem;
+    }
+    
+    @media (min-width: @screen-lg) {
+      margin-bottom: 2rem;
+    }
+  }
+ 
+  
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 2rem;
+    
+    border-top: 1px solid @receipt-border;
+    
+    a {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: @red-text;
+      
+      @media (min-width: @screen-sm) {
+        font-size: 1.6rem;
+      }
+      
+      @media (min-width: @screen-lg) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

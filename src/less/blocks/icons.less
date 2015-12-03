@@ -1,0 +1,40 @@
+.logo {
+  .make-icon("../img/logo.png", @position-v: top);
+  
+  &--red {
+    background-image: url("../img/logo--red.png");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/logo--red@2x.png");
+    }
+  }
+  
+  &--monochrome {
+    background-image: url("../img/logo--monochrome.svg");
+  }
+}
+
+
+.search {
+  .make-icon("../img/icon-search.svg");
+}
+
+
+.menu-toggle {
+  .make-icon("../img/icon-menu.svg");
+}
+
+
+.logo-vk {
+  .make-icon("../img/logo-vk.svg", @position-h: center);
+}
+
+
+.logo-ok {
+  .make-icon("../img/logo-ok.svg", @position-h: center);
+}
+
+
+.logo-mailru {
+  .make-icon("../img/logo-mailru.svg", @position-h: center);
+}

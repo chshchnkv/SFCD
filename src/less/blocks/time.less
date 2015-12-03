@@ -1,0 +1,48 @@
+.time {
+  position: relative;
+  padding-left: 1.4rem;
+
+  font-size: 1.2rem;
+  line-height: normal;
+  color: fadeout(@color-text-dark, 60);
+  
+  @media (min-width: @screen-sm) {
+    padding-left: 1.6rem;
+    
+    font-size: 1.6rem;
+  }
+  
+  @media (min-width: @screen-lg) {
+    padding-left: 2.2rem;
+    
+    font-size: 1.8rem;
+  }
+  
+  &:before {
+    content: "";
+    
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    
+    display: block;
+    width: 1.1rem;
+    height: 1.1rem;
+        
+    @media (min-width: @screen-sm) {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    @media (min-width: @screen-lg) {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    
+    background-image: url("../img/icon-time.svg");
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+}

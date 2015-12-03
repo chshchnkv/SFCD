@@ -1,0 +1,43 @@
+.category {
+  position: relative;
+  padding-left: 2rem;
+  
+  font-size: 1.1rem;
+  color: fadeout(@color-text-dark, 60);
+  
+  @media (min-width: @screen-sm) {
+    font-size: 1.4rem;
+  }
+  
+  @media (min-width: @screen-lg) {
+    font-size: 1.6rem;
+  }
+  
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    
+    display: block;
+    width: 1.7rem;
+    height: 1.7rem;
+
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    
+  }
+  
+  &--vegetarian {
+    &:before {
+      background-image: url("../img/icon-leaf.png");
+      
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/icon-leaf@2x.png")
+      }
+    }
+  }
+}

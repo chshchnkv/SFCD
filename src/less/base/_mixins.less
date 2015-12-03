@@ -1,0 +1,51 @@
+.outline (@size: 1px, @type: dotted, @color: rgba(0, 177, 255, 0.8)) when (@debug = true) {
+    outline: @arguments;
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+.hover-underlined() {
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+.list-no-markers {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+  li {
+//    padding: 0;
+    
+    &:before,
+    &:after {
+      content: none;
+    }
+  }
+}
+
+
+.make-icon(@img-url, @position-h: left, @position-v: center) {
+  display: block;
+  margin: 0;
+  padding: 0;
+  
+  width: 100%;
+  height: 100%;
+  
+  background-image: url(@img-url);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: @position-h @position-v;
+}

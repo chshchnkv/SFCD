@@ -1,0 +1,42 @@
+.social-links {
+  
+  margin-bottom: 3rem;
+  padding: 1.2rem 0;
+  
+  @media (min-width: @screen-sm) {
+    margin-bottom: 7rem;
+  }
+  
+  &__list {
+    .list-no-markers;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+  }
+  
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 3.6rem;
+    height: 3.6rem;
+    
+    border: 1px solid fadeout(@social, 30);
+    border-radius: 50%;
+    
+    
+    a {
+      flex-basis: 50%;
+      max-width: 50%;
+      height: 50%;
+    }
+    
+    & + & {
+      margin-left: 1.5rem;
+    }
+    
+  }
+  
+}

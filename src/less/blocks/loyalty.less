@@ -1,0 +1,106 @@
+.loyalty {
+
+  .container {    
+    position: relative;
+  }
+  
+  padding: 3rem 0;
+  
+  line-height: 1;
+  
+  color: @color-text-light;
+  background-color: @red-text;
+  
+  @media (min-width: @screen-sm) {
+    padding: 6rem 0;
+  }
+  
+  .h2 {
+    margin-bottom: 2rem;
+  }
+ 
+  .p {
+    
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 500;
+    
+    @media (min-width: @screen-sm) {
+      font-size: 1.8rem;
+      line-height: 2.5rem;
+    }
+    
+  }
+  
+  &__content {
+    margin-bottom: 1.5rem;
+    
+    @media (min-width: @screen-sm) {
+      max-width: 50%;
+      padding-right: 3rem;
+      margin-bottom: 5rem;
+    }
+    
+    @media (min-width: @screen-lg) {
+      max-width: 70%;
+    }
+  }
+  
+  
+  &__card {
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+    @media (min-width: @screen-sm) { 
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      margin-bottom: 0;
+      
+      float: right;
+      padding: 0 2rem;
+    }
+  }
+  
+  
+  &__footer {
+    
+    [class*="button"] {
+      width: 100%;
+
+      @media (min-width: @screen-sm) {
+        width: auto;
+      }
+    }
+    
+  }
+  
+  
+  &-card {
+    display: inline-block;
+    width: 29rem;
+    height: 16rem;
+    
+    padding: 1.5rem 1rem;
+    
+    border-radius: 1.5rem;
+    background-color: #fff;
+    
+    @media (min-width: @screen-sm) {
+      width: 34rem;
+      height: 20rem;
+      
+      padding: 2rem 2.5rem;
+    }
+    
+    &__logo {
+      display: block;
+      
+      width: 60%;
+      height: 100%;
+      
+    }
+  }
+  
+}

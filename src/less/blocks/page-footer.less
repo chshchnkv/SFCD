@@ -1,0 +1,67 @@
+.page-footer {
+
+  font-size: 1.1rem;
+  line-height: normal;
+
+  color: fadeout(@color-text-light, 60);
+  background-color: @footer-bg;
+  
+  @media (min-width: @screen-sm) {
+    padding-top: 7rem;
+    padding-bottom: 19rem;
+    
+    font-size: 1.4rem;
+  }
+  
+  a {
+    display: block;
+    margin-bottom: 1.4rem;
+    
+    
+    color: @color-text-light; 
+    
+    @media (min-width: @screen-sm) {
+      margin-bottom: 1.6rem;
+      
+    }
+  }
+  
+  
+  address {
+    font-style: normal;
+  }
+  
+  
+  &__header {
+    margin-bottom: 2rem;
+        
+    @media (min-width: @screen-sm) {
+      margin-bottom: 2.5rem;
+    }
+  }
+  
+  
+  &__list {
+    .make-row();  
+    .row-custom-gutters();
+  }
+  
+  
+  &__item {
+    .make-sm-column(1);
+    .col-custom-gutters();
+    
+    
+    &--contacts {      
+      .make-sm-column(2);
+    }
+  }
+  
+  
+  &__logo {
+    width: 15rem;
+    height: 3rem;
+    
+  }
+  
+}

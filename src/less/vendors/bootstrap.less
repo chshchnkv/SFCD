@@ -1,0 +1,90 @@
+// Core variables and mixins
+@import "../../../node_modules/bootstrap/less/variables";
+@import "../../../node_modules/bootstrap/less/mixins";
+
+//** Number of columns in the grid.
+@grid-columns:              6;
+//** Padding between columns. Gets divided in half for the left and right.
+//@grid-gutter-width:         15px;
+
+
+// Core CSS
+@import "../../../node_modules/bootstrap/less/grid";
+@import "../../../node_modules/bootstrap/less/responsive-utilities";
+
+
+[class ^= "container"] {
+  position: relative;
+  
+  &:before, &:after {
+    content: none;
+  }
+}
+
+@gutter-md: 30px;
+@gutter-lg: 54px;
+
+// миксин для задания отступов колонок, используется для генерации кастомных отступов для точек останова
+.col-custom-gutter(@new-gutter-width) {
+    padding-left: (@new-gutter-width / 2);
+    padding-right: (@new-gutter-width / 2);  
+}
+
+.row-custom-gutter(@new-gutter-width) {
+  margin-left: -(@new-gutter-width / 2);
+  margin-right: -(@new-gutter-width / 2);
+
+  > [class *= "col-"] {
+    .col-custom-gutter(@new-gutter-width);
+  }    
+}
+
+
+.row-custom-gutters (@md: @gutter-md, @lg:@gutter-lg) {
+  @media (min-width: @screen-md) {
+    .row-custom-gutter(@md);
+  }
+  @media (min-width: @screen-lg) {
+    .row-custom-gutter(@lg);
+  }
+}
+
+
+.col-custom-gutters (@md: @gutter-md, @lg:@gutter-lg) {
+  @media (min-width: @screen-md) {
+    .col-custom-gutter(@md);
+  }
+  @media (min-width: @screen-lg) {
+    .col-custom-gutter(@lg);
+  }
+}
+
+
+.row {
+  
+  &--inline-blocks {
+    
+    &:before, &:after {
+      content: none;
+    }
+    
+
+    font-size: 0;
+
+    > [class ^= "col-"] {
+      float: none;
+      display: inline-block;
+      vertical-align: top;
+      font-size: @font-size-base;
+    }    
+  }
+
+  @media (min-width: @screen-md) {
+    .row-custom-gutter(30px);
+  }
+  
+  @media (min-width: @screen-lg) {
+    .row-custom-gutter(54px);
+  }
+  
+}

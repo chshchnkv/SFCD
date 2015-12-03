@@ -1,0 +1,33 @@
+{
+  "name": "sfcd",
+  "private": "true",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chshchnkv/SFCD.git"
+  },
+  "author": "chshchnkv",
+  "bugs": {
+    "url": "https://github.com/chshchnkv/SFCD/issues"
+  },
+  "homepage": "https://github.com/chshchnkv/SFCD#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.1.1",
+    "bootstrap": "^3.3.6",
+    "gulp": "^3.9.0",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-copy2": "^0.2.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-less": "^3.0.5",
+    "gulp-minify-css": "^1.2.2",
+    "gulp-postcss": "^6.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-server-livereload": "^1.5.4",
+    "gulp-watch": "^4.3.5",
+    "normalize.less": "^1.0.0"
+  },
+  "dependencies": {
+    "imagemin-pngquant": "^4.2.0"
+  }
+}
