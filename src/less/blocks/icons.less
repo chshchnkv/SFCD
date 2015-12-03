@@ -1,5 +1,7 @@
 .logo {
-  .make-icon("../img/logo.png", @position-v: top);
+  .make-icon( @img-url: "../img/logo.png", 
+              @img-url2x: "../img/logo@2x.png", 
+              @position-v: top);
   
   &--red {
     background-image: url("../img/logo--red.png");
@@ -11,7 +13,12 @@
   
   &--monochrome {
     background-image: url("../img/logo--monochrome.svg");
+    
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/logo--monochrome.svg");
+    }
   }
+
 }
 
 

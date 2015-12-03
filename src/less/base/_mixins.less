@@ -36,7 +36,7 @@
 }
 
 
-.make-icon(@img-url, @position-h: left, @position-v: center) {
+.make-icon(@img-url, @img-url2x: @img-url, @position-h: left, @position-v: center) {
   display: block;
   margin: 0;
   padding: 0;
@@ -48,4 +48,8 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: @position-h @position-v;
+  
+  @media (min-resolution: 1.5dppx) {
+    background-image: url(@img-url2x);
+  }
 }
