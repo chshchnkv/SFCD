@@ -14,24 +14,14 @@
   
   background-image: url("../img/bg-map.png");
   background-size: auto 100%;
-  background-position: left center;
+  background-position: -20% center;
   background-repeat: no-repeat;
   
   @media (min-resolution: 1.5dppx) {
     background-image: url("../img/bg-map@2x.png");
   }
   
-  .p {
-    
-    font-size: 1em;
-    color: @color-text-light;
-    
-    @media (min-width: @screen-sm) {
-      color: @color-text-lime;
-    }
-  }
-  
-  @media (min-width: @screen-sm) {
+  @media (min-width: @screen-md) {
     font-size: 2.4rem;
     padding-top: 6.5rem;
     padding-bottom: 8.5rem;
@@ -45,6 +35,16 @@
     padding-bottom: 9rem;
     
     background-position: 30% center;
+  }
+  
+  .p {
+    
+    font-size: 1em;
+    color: @color-text-light;
+    
+    @media (min-width: @screen-md) {
+      color: @color-text-lime;
+    }
   }
   
   &__count {

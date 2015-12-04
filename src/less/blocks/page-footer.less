@@ -1,6 +1,6 @@
 @logo-width: 14.8rem;
 @logo-height: 2.8rem;
-@header-padding-sm: 2.5rem;
+@header-padding-md: 2.5rem;
 
 .page-footer {
   padding-bottom: 3rem;
@@ -11,7 +11,7 @@
   color: fadeout(@color-text-light, 60);
   background-color: @footer-bg--xs;
   
-  @media (min-width: @screen-sm) {
+  @media (min-width: @screen-md) {
     padding-top: 7rem;
     padding-bottom: 19rem;
     
@@ -23,7 +23,7 @@
     display: block;
     margin-bottom: 0.4rem;
     
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-md) {
       margin-bottom: 1.6rem;
       
     }
@@ -47,14 +47,14 @@
   
   &__item {
 
-    .make-sm-column(1);
+    .make-md-column(1);
     .col-custom-gutters();
     
     padding-right: 0;
     
     
     &--contacts {
-      .make-sm-column(2);
+      .make-md-column(2);
     }
 
     
@@ -88,16 +88,16 @@
         background-size: contain;
         background-repeat: no-repeat;
         
-        @media (min-width: @screen-sm) {
+        @media (min-width: @screen-md) {
           display: none;
         }
       }
 
-      @media (min-width: @screen-sm) {
-        min-height: @logo-height + @header-padding-sm;
+      @media (min-width: @screen-md) {
+        min-height: @logo-height + @header-padding-md;
         
         padding-top: 0;
-        padding-bottom: @header-padding-sm;
+        padding-bottom: @header-padding-md;
         
         cursor: inherit;
         border-bottom: none;
@@ -128,7 +128,7 @@
       overflow: hidden;
       transition: max-height 0.5s ease-out, border-color 0.5s ease-in-out;
       
-      @media (min-width: @screen-sm) {
+      @media (min-width: @screen-md) {
         max-height: inherit;
       }
       

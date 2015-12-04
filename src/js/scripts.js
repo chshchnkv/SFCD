@@ -15,7 +15,7 @@
     if (itemHeader) {
       
       itemHeader.addEventListener("click", function (event) {
-        if (window.matchMedia("(max-width: 767px)").matches) {
+        if (window.matchMedia("(max-width: 999px)").matches) {
           event.preventDefault();
 
           itemHeader.classList.toggle("page-footer__item-header--opened");

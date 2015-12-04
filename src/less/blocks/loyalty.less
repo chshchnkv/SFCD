@@ -11,7 +11,7 @@
   color: @color-text-light;
   background-color: @red-text;
   
-  @media (min-width: @screen-sm) {
+  @media (min-width: @screen-md) {
     padding: 6rem 0;
   }
   
@@ -25,7 +25,7 @@
     line-height: 1.6rem;
     font-weight: 500;
     
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-md) {
       font-size: 1.8rem;
       line-height: 2.5rem;
     }
@@ -35,7 +35,7 @@
   &__content {
     margin-bottom: 1.5rem;
     
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-md) {
       max-width: 50%;
       padding-right: 3rem;
       margin-bottom: 5rem;
@@ -51,7 +51,7 @@
     text-align: center;
     margin-bottom: 1.5rem;
 
-    @media (min-width: @screen-sm) { 
+    @media (min-width: @screen-md) { 
       position: absolute;
       bottom: 0;
       right: 0;
@@ -65,11 +65,16 @@
   
   
   &__footer {
+    text-align: center;
     
-    [class*="button"] {
-      width: 100%;
+    @media (min-width: @screen-md) {
+      text-align: left;
+    }
 
-      @media (min-width: @screen-sm) {
+    [class*="button"] {
+      width: 29rem;
+
+      @media (min-width: @screen-md) {
         width: auto;
       }
     }
@@ -87,7 +92,7 @@
     border-radius: 1.5rem;
     background-color: #fff;
     
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-md) {
       width: 34rem;
       height: 20rem;
       
