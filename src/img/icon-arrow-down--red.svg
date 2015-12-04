@@ -2,8 +2,8 @@
   <defs>
     <style>
       .svg-arrow-down {
-        fill: #fff;
-        opacity: 0.4;
+        fill: #fe9389;
+        stroke: #fe9389;
         fill-rule: evenodd;
       }
     </style>
