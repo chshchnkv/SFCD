@@ -1,9 +1,31 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">  
   <link rel=stylesheet href="css/style.min.css">
+  <link rel="apple-touch-icon" sizes="57x57" href="./img/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./img/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./img/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./img/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./img/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./img/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./img/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="./img/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="./img/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="./img/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="./img/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="./img/manifest.json">
+  <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="./img/favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="Пятёрочка">
+  <meta name="application-name" content="Пятёрочка">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="./img/mstile-144x144.png">
+  <meta name="msapplication-config" content="./img/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
   <title>Пятёрочка</title>
 </head>
 <body>
@@ -75,42 +97,49 @@
   
   <main>
     <div class="slider">
-      <div class="container">
         
-        <div class="slider__controls">
-          <div class="slider__control"></div>
-          <div class="slider__control"></div>
-          <div class="slider__control"></div>
+        <div class="slider__content">
+          <div class="container">
+            <article class="slider__item  product  product--promo">
+              <div class="product__description">
+                <div class="p">c 30 июня по 6 июля 2015 года</div>
+                <h2 class="product__header">Окорочка куриные охлаждённые</h2>
+                <div class="p">1 кг</div>
+              </div>
+
+              <div class="product__photo">
+                <img src="img/pic-chicken.png" alt="Окорочка куриные охлаждённые" width="525" height="382">
+              </div>
+
+              <div class="product__price  price  price--promo">
+                <div class="price__old">189<sup>50</sup></div>
+                <div class="price__new">129<sup>00</sup></div>
+                <div class="price__discount">-20%</div>
+              </div>
+
+            </article>
+          </div>
+      </div>
+        
+      <div class="slider__footer">
+        <div class="container">
+          
+          <div class="social-links">
+            <ul class="social-links__list">
+              <li class="social-links__item"><a href="#"><i class="logo-vk"></i></a></li>
+              <li class="social-links__item"><a href="#"><i class="logo-ok"></i></a></li>
+              <li class="social-links__item"><a href="#"><i class="logo-mailru"></i></a></li>
+            </ul>
+          </div>
+
+          <div class="slider__controls">
+            <div class="slider__control  slider__control--active"></div>
+            <div class="slider__control"></div>
+            <div class="slider__control"></div>
+          </div>
         </div>
-        
-        <article class="slider__item  product  product--promo">
-          <div class="product__description">
-            <div class="p">c 30 июня по 6 июля 2015 года</div>
-            <h2 class="product__header">Окорочка куриные охлаждённые</h2>
-            <div class="p">1 кг</div>
-          </div>
-          <img class="product__photo" src="img/pic-chicken.png" alt="Окорочка куриные охлаждённые" width="525" height="382">
-          
-          <div class="product__price  price  price--promo">
-            <div class="price__old">189<sup>50</sup></div>
-            <div class="price__new">129<sup>00</sup></div>
-            <div class="price__discount">-20%</div>
-          </div>
-          
-        </article>
       </div>
       
-    </div>
-    
-    
-    <div class="social-links">
-      <div class="container">
-        <ul class="social-links__list">
-          <li class="social-links__item"><a href="#"><i class="logo-vk"></i></a></li>
-          <li class="social-links__item"><a href="#"><i class="logo-ok"></i></a></li>
-          <li class="social-links__item"><a href="#"><i class="logo-mailru"></i></a></li>
-        </ul>
-      </div>
     </div>
     
     
@@ -366,6 +395,11 @@
 
   </footer>
     
+  <script>
+    var html = document.querySelector("html");
+    html.classList.remove("no-js");
+    html.classList.add("js");
+  </script>
   <script src="js/scripts.js"></script>
 </body>
 </html>

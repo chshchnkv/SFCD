@@ -68,6 +68,10 @@
       
       border-bottom: 1px solid #697176;
       
+      .no-js & {
+        border-bottom-color: transparent;
+      }
+      
       transition: border-color 0.5s ease-in-out;
 
       
@@ -122,10 +126,17 @@
 
     }
     
+    .no-js &-content {
+      border-bottom: 1px solid #697176;
+      @media (min-width: @screen-md) {
+        border-bottom-color: transparent;
+      }
+    }
 
-    &-content {
+    .js &-content {
       max-height: 0;
-      overflow: hidden;
+      overflow: hidden;      
+      
       transition: max-height 0.5s ease-out, border-color 0.5s ease-in-out;
       
       @media (min-width: @screen-md) {
